@@ -7,24 +7,24 @@
     tools:context=".views.MainActivity">
 
     <TextView
-        android:id="@+id/fetching_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Fetching optimized shipments..."
-        android:textSize = "24dp"
+        android:text=""
+        android:textSize="24dp"
+        android:id="@+id/shipment_address"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-    <ListView
-        android:id="@+id/drivers_list_view"
-        android:visibility="invisible"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/ss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="24dp"
+        app:layout_constraintBottom_toBottomOf="@id/shipment_address"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Itjuana">
         <activity
+            android:name=".views.ShipmentView"
+            android:exported="false"
+            android:parentActivityName=".views.MainActivity"/>
+        <activity
             android:name=".views.MainActivity"
             android:exported="true">
             <intent-filter>

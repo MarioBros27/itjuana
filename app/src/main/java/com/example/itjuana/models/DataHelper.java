@@ -11,6 +11,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 
 public class DataHelper {
+    //This function fetches the json file and returns it as a string
     public static String getJsonFromAssets(Context context, String fileName) {
         String jsonString;
         try {
@@ -27,13 +28,14 @@ public class DataHelper {
         return jsonString;
     }
 
+    //This function returns the strings of the arrays on the JSON file
     public static String[] getArrayFromJSON(String kind, String data) {
         try {
             JSONObject obj = new JSONObject(data);
-            JSONArray driversArray = obj.getJSONArray(kind);
-            String[] elements = new String[driversArray.length()];
-            for (int i = 0; i < driversArray.length(); i++) {
-                elements[i] = driversArray.getString(i);
+            JSONArray array = obj.getJSONArray(kind);
+            String[] elements = new String[array.length()];
+            for (int i = 0; i < array.length(); i++) {
+                elements[i] = array.getString(i);
             }
             return elements;
         } catch (Exception e) {

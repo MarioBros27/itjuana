@@ -10,8 +10,8 @@ import com.example.itjuana.models.HungarianAlgorithm;
 
 import java.util.ArrayList;
 
-public class TableViewmodel {
-    public Driver[] fetchTableData(Context context, String fileName) {
+public class DriverListViewmodel {
+    public Driver[] fetchListData(Context context, String fileName) {
 
         String jsonFileString = DataHelper.getJsonFromAssets(context, fileName);
         String[] driversStrings = DataHelper.getArrayFromJSON("drivers", jsonFileString);
@@ -47,7 +47,7 @@ public class TableViewmodel {
                 Address address = addresses[i];
                 Driver driver = drivers[j];
                 double ss = 0.0;
-                //Requirements 1 and two
+                //Requirements 1 and 2
                 if (address.streetLength % 2 == 0) {
                     ss = driver.nameLength * 1.5;
                 } else {
